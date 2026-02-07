@@ -17,17 +17,10 @@ public class UserModel {
 
     private String name;
     private String role;
+    private String patronymic;
     private String surname;
-    @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = false, unique = true)
     private String number;
-
-    @ManyToOne
-    @JoinColumn(name = "groupId", nullable = true)
-    private GroupModel group;
-
-    @ManyToOne
-    @JoinColumn(name = "sessionId", nullable = true)
-    private SessionModel session;
+    private Long groupId;
+    private Long sessionId;
 }

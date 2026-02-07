@@ -1,5 +1,6 @@
 package com.example.istoki_diary.controller;
-import com.example.istoki_diary.model.UserModel;
+import com.example.istoki_diary.dto.request.UserRequestDTO;
+import com.example.istoki_diary.dto.response.UserResponseDTO;
 import org.springframework.web.bind.annotation.*;
 import com.example.istoki_diary.service.UserService;
 import java.util.List;
@@ -14,12 +15,12 @@ public class UserController {
     }
 
     @PostMapping
-    public UserModel createUser(@RequestBody UserModel user) {
-        return userService.createUser(user);
+    public UserResponseDTO registerUser(@RequestBody UserRequestDTO user) {
+        return userService.registerUser(user);
     }
 
     @GetMapping
-    public List<UserModel> getUsers() {
+    public List<UserResponseDTO> getUsers() {
         return userService.getAllUsers();
     }
 }
