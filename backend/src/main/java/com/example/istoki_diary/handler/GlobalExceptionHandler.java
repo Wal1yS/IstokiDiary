@@ -22,7 +22,6 @@ public class GlobalExceptionHandler {
         if (ex instanceof NoResourceFoundException) {
             throw ex;
         }
-        ex.printStackTrace();
         CustomExceptionDTO error = new CustomExceptionDTO("GENERAL_ERROR", "An unexpected error occurred.");
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
