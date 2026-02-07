@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class CustomErrorDTO{
+public class CustomExceptionDTO {
     private final String status;
     private final String message;
 }

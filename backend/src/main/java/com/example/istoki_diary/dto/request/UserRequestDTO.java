@@ -4,12 +4,10 @@ import lombok.AllArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class UserCreationRequestDTO {
+public class UserRequestDTO {
     private String name;
     private String surname;
-    private String role;
+    private String patronymic;
     private String email;
     private String number;
-    private Long groupId;
-    private Long sessionId;
 }
