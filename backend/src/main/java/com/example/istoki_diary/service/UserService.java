@@ -18,7 +18,8 @@ public class UserService {
 
     public List<UserResponseDTO> getAllUsers() {
         return userRepository.findAll().stream().map(user -> {return new UserResponseDTO(
-                "ative",
+                user.getId(),
+                "active",
                 user.getName(),
                 user.getSurname(),
                 user.getPatronymic(),
@@ -60,7 +61,8 @@ public class UserService {
         userModel = userRepository.save(userModel);
 
         UserResponseDTO responseDTO = new UserResponseDTO();
-        responseDTO.setStatus("successfully registered!");
+        responseDTO.setId(userModel.getId());
+        responseDTO.setStatus("registered");
         responseDTO.setName(userModel.getName());
         responseDTO.setSurname(userModel.getSurname());
         responseDTO.setPatronymic(userModel.getPatronymic());
