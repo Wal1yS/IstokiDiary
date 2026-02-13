@@ -1,4 +1,4 @@
-import { UserList } from '../components/Main/UserList';
+import { UserList } from '../components/main/UserList';
 
 export const UserPage = () => {
     return (

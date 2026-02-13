@@ -1,7 +1,7 @@
 import React from "react";
-import { LoginButton } from "../components/RL/Login/LoginButton";
-import { RegisterButton } from "../components/RL/Register/RegisterButton";
-import { ScrollReveal } from "../components/Effects/ScrollReveal";
+import { LoginButton } from "../components/auth/login/LoginButton";
+import { RegisterButton } from "../components/auth/register/RegisterButton";
+import { ScrollReveal } from "../components/effects/ScrollReveal";
 import "../components/css/Animations.css";
 
 export const RLPage: React.FC = () => {

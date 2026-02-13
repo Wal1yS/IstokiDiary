@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import { RLHeader } from '../components/RL/RLHeader';
-import { ParallaxBackground } from '../components/Effects/ParallaxBackground';
+import { RLHeader } from '../components/auth/RLHeader';
+import { ParallaxBackground } from '../components/effects/ParallaxBackground';
 
 export const RLLayout = () => {
     return (
