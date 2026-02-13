@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "ST-Nizhegorodsky";
+  src: url("./assets/fonts/ST-Nizhegorodsky.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, "ST-Nizhegorodsky";
   line-height: 1.5;
   font-weight: 400;
 

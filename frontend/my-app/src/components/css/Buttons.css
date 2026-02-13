@@ -1,0 +1,88 @@
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.customBtn.ant-btn {
+	position: relative;
+	background: #ffffff;
+	color: #000000;
+	border: none;
+	border-radius: 100px;
+	padding: 12px 24px;
+	font-weight: 600;
+	font-size: 40px;
+	height: auto;
+	transition: all 0.3s ease;
+	outline: none;
+	z-index: 1;
+	/* Mouse position variables */
+	--mouseX: 50%;
+	--mouseY: 50%;
+}
+
+/* Внутренний эффект следования мыши (Radial Gradient) */
+.inner-glow {
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+		200px circle at var(--mouseX) var(--mouseY),
+		rgb(174, 50, 50),
+		transparent 100%
+	);
+	border-radius: inherit;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+	pointer-events: none;
+}
+
+.customBtn.ant-btn:hover::before {
+	opacity: 0.6;
+}
+
+.customBtn.ant-btn:hover .inner-glow {
+	opacity: 1;
+}
+
+.customBtn.ant-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(255, 0, 64, 0.3);
+}
+
+.customBtn.ant-btn:hover::after {
+	opacity: 1;
+}
+
+/* Специфичные настройки для Ant Design */
+.customBtn.ant-btn.ant-btn-primary {
+	border: none;
+	background: #ffffff;
+}
+
+.customBtn.ant-btn.ant-btn-primary:hover {
+	color: #ffffff;
+	background: #800020;
+}
+
+/* Текст всегда сверху */
+.customBtn.ant-btn span {
+	position: relative;
+	z-index: 3;
+}
+
+
+.infoBtn.ant-btn-link {
+	color: #000000;
+	transition: color 0.3s ease;
+}
+
+.infoBtn.infoBtn.ant-btn-link:hover {
+	color: #ff0000;
+	transition: color 0.3s ease;
+}
+
+.infoBtn.ant-btn-link:hover {
+	color: #800020 !important;
+}
