@@ -1,5 +1,4 @@
 package com.example.istoki_diary.service;
-import com.example.istoki_diary.config.SecurityConfig;
 import com.example.istoki_diary.dto.request.RegistrationRequestDTO;
 import com.example.istoki_diary.dto.response.RegistrationResponseDTO;
 import com.example.istoki_diary.exception.CustomException;

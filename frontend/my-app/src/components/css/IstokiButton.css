@@ -1,0 +1,24 @@
+.ant-btn.istokiBtn,
+.istokiBtn.ant-btn {
+  font-family: "ST-Nizhegorodsky", sans-serif !important;
+  font-size: 42px;
+  font-weight: bold;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  height: auto;
+  white-space: nowrap;
+}
+
+.istokiBtn.ant-btn-link {
+	color: #800020;
+	transition: color 0.3s ease;
+}
+
+.istokiBtn.ant-btn-link:hover,
+.istokiBtn.ant-btn-link:focus,
+.istokiBtn.ant-btn-link:active {
+	color: #800020 !important;
+}
