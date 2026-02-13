@@ -16,9 +16,10 @@ public class UserModel {
     private Long id;
 
     private String name;
-    private String role;
-    private String patronymic;
     private String surname;
+    private String patronymic;
+    private String password;
+    private String role;
     private String email;
     private String number;
     private Long groupId;

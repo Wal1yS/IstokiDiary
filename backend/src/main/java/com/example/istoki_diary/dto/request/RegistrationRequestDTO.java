@@ -1,18 +1,14 @@
-package com.example.istoki_diary.dto.response;
+package com.example.istoki_diary.dto.request;
 import lombok.Data;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
-public class UserResponseDTO {
-    private Long id;
-    private String status;
+public class RegistrationRequestDTO {
     private String name;
     private String surname;
     private String patronymic;
-    private String role;
+    private String password;
     private String email;
     private String number;
 }
