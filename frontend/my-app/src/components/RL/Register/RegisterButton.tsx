@@ -1,9 +1,9 @@
 import React from "react";
-import { Modal, Form, Button, type FormProps, Input, Checkbox } from "antd";
+import {Button, type FormProps} from "antd";
 import { useNavigate } from "react-router-dom";
 import { registerUser, type RegisterUserDTO } from "../../../api/DTO/RegisterUser";
 import { RegisterModal } from "./RegisterModal";
-import "../css/Buttons.css";
+import "../../css/Buttons.css";
 
 export const RegisterButton: React.FC = () => {
 

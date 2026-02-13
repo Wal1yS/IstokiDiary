@@ -6,6 +6,7 @@ import com.example.istoki_diary.service.RegistrationService;
 
 @RestController
 @RequestMapping("/reg")
+@CrossOrigin(origins = "http://localhost:5173")
 public class RegistrationController {
     private final RegistrationService registrationService;
 

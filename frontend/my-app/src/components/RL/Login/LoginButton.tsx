@@ -3,7 +3,7 @@ import { Modal, Form, Button, type FormProps, Input, Checkbox } from "antd";
 import { useNavigate } from "react-router-dom";
 import { loginUser, type LoginUserDTO } from "../../../api/DTO/LoginUser";
 import { LoginModal } from "./LoginModal";
-import "../css/Buttons.css";
+import "../../css/Buttons.css";
 
 
 export const LoginButton: React.FC = () => {
