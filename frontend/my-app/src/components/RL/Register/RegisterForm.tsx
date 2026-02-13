@@ -43,9 +43,26 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                     rules={[{ required: true, message: 'Пожалуйста, введите вашу почту!' }]}
                     >
                 <Input />
-            
             </Form.Item>
-                <Form.Item label={null}>
+
+            <Form.Item<RegisterUserDTO>
+                    label="Номер телефона"
+                    name="number"
+                    rules={[{ required: true, message: 'Пожалуйста, введите ваш номер телефона!' }]}
+                    >
+                <Input />
+            </Form.Item>
+
+            <Form.Item<RegisterUserDTO>
+                    label="Пароль"
+                    name="password"
+                    rules={[{ required: true, message: 'Пожалуйста, введите ваш пароль!' }]}
+                    >
+                <Input.Password />
+            </Form.Item>
+
+            
+            <Form.Item label={null}>
                     <Button type="primary" htmlType="submit">
                             Отправить
                     </Button>

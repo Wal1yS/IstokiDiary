@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
-import './css/header.css';
+import '../css/header.css';
 
 export const Header = () => {
     const navigate = useNavigate();

@@ -14,9 +14,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
             autoComplete="off"
         >
             <Form.Item<LoginUserDTO>
-                    label="Имя"
-                    name="name"
-                    rules={[{ required: true, message: 'Пожалуйста, введите ваше имя!' }]}
+                    label="Email"
+                    name="email"
+                    rules={[{ required: true, message: 'Пожалуйста, введите ваш email!' }]}
                     >
                 <Input />
             </Form.Item>
