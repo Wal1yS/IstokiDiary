@@ -5,4 +5,5 @@ import com.example.istoki_diary.model.EventModel;
 
 @Repository
 public interface EventRepository extends JpaRepository<EventModel, Long> {
+
 }

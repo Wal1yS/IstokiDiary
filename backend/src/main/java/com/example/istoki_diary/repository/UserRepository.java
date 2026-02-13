@@ -7,4 +7,5 @@ import com.example.istoki_diary.model.UserModel;
 public interface UserRepository extends JpaRepository<UserModel, Long> {
     boolean existsByEmail(String email);
     boolean existsByNumber(String number);
+    UserModel findByEmail(String email);
 }
