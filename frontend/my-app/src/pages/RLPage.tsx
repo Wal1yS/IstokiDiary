@@ -1,7 +1,7 @@
 import React from "react";
 import { LoginButton } from "../components/auth/login/LoginButton";
 import { RegisterButton } from "../components/auth/register/RegisterButton";
-import { ScrollReveal } from "../components/effects/ScrollReveal";
+import { ScrollReveal } from "../components/Effects/ScrollReveal";
 import "../components/css/Animations.css";
 import { Typography } from "antd";
 
