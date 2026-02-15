@@ -7,18 +7,18 @@ import {useNavigate} from "react-router-dom";
 
 const userItem: TabsProps['items'] = [
     {
-        key: 'diary',
+        key: '/home/diary',
         label: 'Дневник',
     },
     {
-        key: 'dynamic',
+        key: '/home/dynamic',
         label: 'Динамика',
     }
 ];
 
 const couratorItem: TabsProps['items'] = [
     {
-        key: 'info',
+        key: '/info',
         label: 'Ученики',
     }
 ];
@@ -37,7 +37,7 @@ export const Header = () => {
             )}
 
             {role === 'USER' && (
-                <Tabs className={"header-tabs"} defaultActiveKey="diary" items={userItem} onChange={onChange} />
+                <Tabs className={"header-tabs"}  items={userItem} onChange={onChange} />
             )}
         </nav>
     );

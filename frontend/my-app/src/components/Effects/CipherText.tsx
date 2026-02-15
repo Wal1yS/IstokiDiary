@@ -16,7 +16,7 @@ export const CipherText: React.FC<CipherTextProps> = ({ text, speed = 30, delay 
         let iteration = 0;
         const interval = setInterval(() => {
             setDisplayText(prev => 
-                prev.split("").map((char, index) => {
+                prev.split("").map((_, index) => {
                     if (index < iteration) return text[index];
                     return chars[Math.floor(Math.random() * chars.length)];
                 }).join("")
