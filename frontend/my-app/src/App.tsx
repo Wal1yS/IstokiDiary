@@ -7,6 +7,7 @@ import './App.css'
 import { Infopage } from './pages/Infopage';
 import { RLLayout } from './layouts/RLLayout';
 import { RLPage } from './pages/RLPage';
+import { GroupCoordinator } from './pages/curator/GroupCoordinator';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="diary" element={<DiaryPage />} />
           <Route path="dynamic" element={<DynamicPage />} />
+          <Route path="info" element={<GroupCoordinator />} />
       </Route>
       <Route path="*" element={<h2>404</h2>} />
     </Routes>

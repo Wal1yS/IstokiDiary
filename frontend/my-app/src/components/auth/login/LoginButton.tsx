@@ -5,6 +5,7 @@ import { useAuth } from "../../../context/AuthContext";
 import { loginUser, type LoginRequestDTO } from "../../../api/DTO/LoginUser";
 import { LoginModal } from "./LoginModal";
 import "../../css/Buttons.css";
+import { text } from "framer-motion/client";
 
 
 export const LoginButton: React.FC = () => {
@@ -29,7 +30,7 @@ export const LoginButton: React.FC = () => {
                 login(role);
             }
             setIsModalOpen(false);
-            navigate('/home');
+            navigate(createdUser.role === 'CURATOR' ? 'home/info' : 'home/diary');
         }
         catch (error) {
             console.error('Error logging in user:', error);
@@ -52,6 +53,10 @@ export const LoginButton: React.FC = () => {
                 type="primary" 
                 onClick={showModal}
                 onMouseMove={handleMouseMove}
+                style={{
+                    fontSize: 24,
+                    padding: '12px 24px',
+                }}
             >
                 <div className="inner-glow" />
                 <span>Вход</span>

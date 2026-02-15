@@ -1,8 +1,11 @@
+import { useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import { RLHeader } from '../components/auth/RLHeader';
-import { ParallaxBackground } from '../components/effects/ParallaxBackground';
+import { ParallaxBackground } from '../components/Effects/ParallaxBackground';
 
 export const RLLayout = () => {
+    const mainRef = useRef<HTMLElement | null>(null);
+
     return (
         <div style={{ 
             width: '100%', 
@@ -13,12 +16,13 @@ export const RLLayout = () => {
             backgroundColor: 'transparent',
             position: 'relative'
         }}>
-            <ParallaxBackground />
 
             <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <RLHeader />
 
-                <main style={{ 
+                <main
+                    ref={mainRef}
+                    style={{ 
                     padding: '20px', 
                     flex: 1, 
                     width: '100%', 

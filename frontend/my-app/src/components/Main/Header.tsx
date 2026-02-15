@@ -2,7 +2,7 @@ import { Tabs, type TabsProps } from 'antd';
 import '../css/Header.css';
 import '../css/Tabs.css';
 import { useAuth } from '../../context/AuthContext';
-import { IstokiButton } from '../auth/RLIstokiButton'
+import { IstokiButton } from '../IstokiButton'
 import {useNavigate} from "react-router-dom";
 
 const userItem: TabsProps['items'] = [
@@ -31,13 +31,18 @@ export const Header = () => {
     };
     return (
         <nav className={"header"} style={{borderBottom: '1px solid #e8e8e8',}}>
-            <IstokiButton/>
             {role === 'CURATOR' && (
-                <Tabs className={"header-tabs"} defaultActiveKey="info" items={couratorItem} onChange={onChange} />
+                <>
+                    <IstokiButton page="/home/info" />
+                    <Tabs className={"header-tabs"} defaultActiveKey="info" items={couratorItem} onChange={onChange} />
+                </>
             )}
 
             {role === 'USER' && (
-                <Tabs className={"header-tabs"} defaultActiveKey="diary" items={userItem} onChange={onChange} />
+                <>
+                    <IstokiButton page="/home/diary" />
+                    <Tabs className={"header-tabs"} defaultActiveKey="diary" items={userItem} onChange={onChange} />
+                </>
             )}
         </nav>
     );

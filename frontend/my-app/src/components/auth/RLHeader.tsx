@@ -1,12 +1,12 @@
 import React from "react";
 import { InfoButton } from "../InfoButton";
-import { IstokiButton } from "./RLIstokiButton.tsx";
+import { IstokiButton } from "../IstokiButton.tsx";
 
 
 export const RLHeader: React.FC = () => {
     return (
         <nav className="header">
-            <IstokiButton></IstokiButton>
+            <IstokiButton page="/"></IstokiButton>
             <InfoButton></InfoButton>
         </nav>
     );

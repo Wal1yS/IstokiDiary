@@ -1,9 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
-import "../css/IstokiButton.css";
+import "./css/IstokiButton.css";
 
-export const IstokiButton: React.FC = () => {
+export type AddressProps = {
+    page: string;
+}
+
+export const IstokiButton: React.FC<AddressProps> = ({ page }) => {
     const navigate = useNavigate();
 
     return (
@@ -11,7 +15,7 @@ export const IstokiButton: React.FC = () => {
         className="istokiBtn"
         color="default" 
         type="link" 
-        onClick={() => navigate('/')}
+        onClick={() => navigate(page)}
         >
             ИСТОКИ
         </Button>

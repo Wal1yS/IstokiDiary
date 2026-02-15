@@ -28,7 +28,7 @@ export const RegisterButton: React.FC = () => {
                 const role = createdUser.role === 'CURATOR' || createdUser.role === 'USER' ? createdUser.role : 'GUEST';
                 login(role);
             }
-            navigate('/home');
+            navigate(createdUser.role === 'CURATOR' ? 'home/info' : 'home/diary');
         }
         catch (error) {
             console.error('Error registering user:', error);
@@ -51,6 +51,10 @@ export const RegisterButton: React.FC = () => {
                 type="primary" 
                 onClick={showModal}
                 onMouseMove={handleMouseMove}
+                style={{
+                    fontSize: 24,
+                    padding: '12px 24px',
+                }}
             >
                 <div className="inner-glow" />
                 <span>Регистрация</span>

@@ -10,9 +10,8 @@
 	color: #000000;
 	border: none;
 	border-radius: 100px;
-	padding: 12px 24px;
+	padding: 6px 12px;
 	font-weight: 600;
-	font-size: 40px;
 	height: auto;
 	transition: all 0.3s ease;
 	outline: none;
@@ -47,8 +46,7 @@
 }
 
 .customBtn.ant-btn:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 8px 25px rgba(255, 0, 64, 0.3);
+	box-shadow: none;
 }
 
 .customBtn.ant-btn:hover::after {
@@ -63,7 +61,7 @@
 
 .customBtn.ant-btn.ant-btn-primary:hover {
 	color: #ffffff;
-	background: #800020;
+	background: #B74B29;
 }
 
 /* Текст всегда сверху */
