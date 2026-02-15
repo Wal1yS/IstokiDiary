@@ -5,7 +5,6 @@ import { useAuth } from "../../../context/AuthContext";
 import { loginUser, type LoginRequestDTO } from "../../../api/DTO/LoginUser";
 import { LoginModal } from "./LoginModal";
 import "../../css/Buttons.css";
-import { text } from "framer-motion/client";
 
 
 export const LoginButton: React.FC = () => {

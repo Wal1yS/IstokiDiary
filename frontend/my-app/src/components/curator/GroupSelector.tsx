@@ -1,7 +1,6 @@
 import React from 'react';
 import { type MenuProps, Dropdown, Space } from 'antd';
 import '../../styles/colors.css';
-import type { Underline } from 'lucide-react';
 
 export type GroupOption = {
     id: number;

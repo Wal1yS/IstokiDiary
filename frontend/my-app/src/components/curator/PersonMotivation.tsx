@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from 'antd';
 import { BulbOutlined } from '@ant-design/icons';
 import { Typography } from 'antd';

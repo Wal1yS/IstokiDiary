@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import { RLHeader } from '../components/auth/RLHeader';
-import { ParallaxBackground } from '../components/Effects/ParallaxBackground';
 
 export const RLLayout = () => {
     const mainRef = useRef<HTMLElement | null>(null);
