@@ -31,12 +31,10 @@ export const LoginButton: React.FC = () => {
             }
             setIsModalOpen(false);
             if (createdUser && createdUser.role == "USER") {
-                console.log("Navigating to /home/diary");
                 navigate('/home/diary');
             }
             if (createdUser && createdUser.role == "CURATOR") {
-                console.log("Navigating to /home");
-                navigate('/home');
+                navigate('/home/info');
             }
         }
         catch (error) {

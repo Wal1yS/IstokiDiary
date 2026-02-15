@@ -32,7 +32,7 @@ export const RegisterButton: React.FC = () => {
                 navigate('/home/diary');
             }
             if (createdUser && createdUser.role == "CURATOR") {
-                navigate('/home');
+                navigate('/home/info');
             }
         }
         catch (error) {
