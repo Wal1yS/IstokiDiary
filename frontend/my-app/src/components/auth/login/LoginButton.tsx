@@ -30,7 +30,14 @@ export const LoginButton: React.FC = () => {
                 login(role);
             }
             setIsModalOpen(false);
-            navigate(createdUser.role === 'CURATOR' ? 'home/info' : 'home/diary');
+            if (createdUser && createdUser.role == "USER") {
+                console.log("Navigating to /home/diary");
+                navigate('/home/diary');
+            }
+            if (createdUser && createdUser.role == "CURATOR") {
+                console.log("Navigating to /home");
+                navigate('/home');
+            }
         }
         catch (error) {
             console.error('Error logging in user:', error);

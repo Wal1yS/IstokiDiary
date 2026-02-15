@@ -28,7 +28,12 @@ export const RegisterButton: React.FC = () => {
                 const role = createdUser.role === 'CURATOR' || createdUser.role === 'USER' ? createdUser.role : 'GUEST';
                 login(role);
             }
-            navigate(createdUser.role === 'CURATOR' ? 'home/info' : 'home/diary');
+            if (createdUser && createdUser.role == "USER") {
+                navigate('/home/diary');
+            }
+            if (createdUser && createdUser.role == "CURATOR") {
+                navigate('/home');
+            }
         }
         catch (error) {
             console.error('Error registering user:', error);

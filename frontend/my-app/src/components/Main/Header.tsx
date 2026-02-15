@@ -7,18 +7,18 @@ import {useNavigate} from "react-router-dom";
 
 const userItem: TabsProps['items'] = [
     {
-        key: 'diary',
+        key: '/home/diary',
         label: 'Дневник',
     },
     {
-        key: 'dynamic',
+        key: '/home/dynamic',
         label: 'Динамика',
     }
 ];
 
 const couratorItem: TabsProps['items'] = [
     {
-        key: 'info',
+        key: '/info',
         label: 'Ученики',
     }
 ];
