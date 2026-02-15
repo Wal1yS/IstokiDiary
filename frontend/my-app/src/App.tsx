@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 import { HomePage } from './pages/HomePage';
-import { UserPage } from './pages/UserPage';
+import { DiaryPage } from './pages/DiaryPage';
+import { DynamicPage } from './pages/DynamicPage';
 import './App.css'
 import { Infopage } from './pages/Infopage';
 import { RLLayout } from './layouts/RLLayout';
@@ -16,8 +17,9 @@ function App() {
       </Route>
 
       <Route path="/home" element={<MainLayout/>}>
-         <Route index element={<HomePage />} />
-        <Route path="users" element={<UserPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="diary" element={<DiaryPage />} />
+          <Route path="dynamic" element={<DynamicPage />} />
       </Route>
       <Route path="*" element={<h2>404</h2>} />
     </Routes>

@@ -1,9 +1,9 @@
 import React from "react";
 import {Button, Form, Input, type FormProps} from "antd";
-import type { RegisterUserDTO } from "../../../api/DTO/RegisterUser";
+import type { RegisterRequestDTO } from "../../../api/DTO/RegisterUser";
 
 export type RegisterFormProps = {
-    onSubmit: FormProps<RegisterUserDTO>['onFinish'];
+    onSubmit: FormProps<RegisterRequestDTO>['onFinish'];
 }
 
 export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
@@ -13,7 +13,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
             onFinish={onSubmit}
             autoComplete="off"
         >
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Имя"
                     name="name"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваше имя!' }]}
@@ -21,7 +21,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Фамилия"
                     name="surname"
                     rules={[{ required: true, message: 'Пожалуйста, введите вашу фамилию!' }]}
@@ -29,7 +29,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Отчество"
                     name="patronymic"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваше отчество!' }]}
@@ -37,7 +37,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Почта"
                     name="email"
                     rules={[{ required: true, message: 'Пожалуйста, введите вашу почту!' }]}
@@ -45,7 +45,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Номер телефона"
                     name="number"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваш номер телефона!' }]}
@@ -53,7 +53,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<RegisterUserDTO>
+            <Form.Item<RegisterRequestDTO>
                     label="Пароль"
                     name="password"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваш пароль!' }]}

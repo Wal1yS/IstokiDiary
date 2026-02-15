@@ -19,14 +19,44 @@
   /* Настройка цветов (можешь поменять на светлую тему, если бесит темная) */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f0f2f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Отключаем обводку у всего, что касается recharts */
+.recharts-wrapper,
+.recharts-surface,
+.recharts-layer {
+    outline: none !important;
+}
+/* Убиваем фокус на всех элементах внутри графиков */
+.recharts-layer:focus,
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+g:focus,
+path:focus,
+foreignObject:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
+/* Специфично для SVG ссылок и групп */
+svg a:focus,
+svg g:focus,
+svg foreignObject:focus {
+    outline: none !important;
+}
+
+/* На всякий случай отключаем именно в состоянии фокуса */
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-wrapper:focus-visible,
+.recharts-surface:focus-visible {
+    outline: none !important;
+}
 /* Самое важное здесь */
 body {
   margin: 0;

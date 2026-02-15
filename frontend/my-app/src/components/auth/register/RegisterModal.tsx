@@ -2,12 +2,12 @@ import React from "react";
 import { Modal } from "antd";
 import { RegisterForm } from "./RegisterForm";
 import { type FormProps } from "antd";
-import type { RegisterUserDTO } from "../../../api/DTO/RegisterUser";
+import type { RegisterRequestDTO } from "../../../api/DTO/RegisterUser";
 
 export type RegisterModalProps = {
     isOpen: boolean;
     onCancel: () => void;
-    onSubmit: FormProps<RegisterUserDTO>['onFinish'];
+    onSubmit: FormProps<RegisterRequestDTO>['onFinish'];
 }
 
 export const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onCancel, onSubmit }) => {

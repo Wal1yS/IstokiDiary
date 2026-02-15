@@ -1,7 +1,8 @@
 import React from "react";
-import { Modal, Form, Button, type FormProps, Input, Checkbox } from "antd";
+import { Button, type FormProps } from "antd";
 import { useNavigate } from "react-router-dom";
-import { loginUser, type LoginUserDTO } from "../../../api/DTO/LoginUser";
+import { useAuth } from "../../../context/AuthContext";
+import { loginUser, type LoginRequestDTO } from "../../../api/DTO/LoginUser";
 import { LoginModal } from "./LoginModal";
 import "../../css/Buttons.css";
 
@@ -9,6 +10,7 @@ import "../../css/Buttons.css";
 export const LoginButton: React.FC = () => {
 
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     
@@ -18,16 +20,20 @@ export const LoginButton: React.FC = () => {
     const handleCancel = () => {
         setIsModalOpen(false);
     }
-    const handleSubmit: FormProps<LoginUserDTO>['onFinish'] = async (values) => {
+    const handleSubmit: FormProps<LoginRequestDTO>['onFinish'] = async (values) => {
         try{
             const createdUser =  await loginUser(values);
             console.log('User logged in successfully:', createdUser);
+            if (createdUser && createdUser.role) {
+                const role = createdUser.role === 'CURATOR' || createdUser.role === 'USER' ? createdUser.role : 'GUEST';
+                login(role);
+            }
             setIsModalOpen(false);
             navigate('/home');
         }
         catch (error) {
             console.error('Error logging in user:', error);
-            navigate('/home');
+            navigate('/');
         }
     }
 

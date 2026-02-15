@@ -1,0 +1,14 @@
+.main-text {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 2vh;
+}
+
+.input-text {
+
+}
+
+.input-text:hover, .input-text:focus, .input-text:focus-within {
+    border-color: var(--buttons-color) !important;
+    box-shadow: 0 0 0 2px rgba(183, 75, 41, 0.2) !important;
+}

@@ -2,12 +2,12 @@ import React from "react";
 import { Modal } from "antd";
 import { LoginForm } from "./LoginFrom";
 import { type FormProps } from "antd";
-import { type LoginUserDTO } from "../../../api/DTO/LoginUser";
+import { type LoginRequestDTO } from "../../../api/DTO/LoginUser";
 
 export type LoginModalProps = {
     isOpen: boolean;
     onCancel: () => void;
-    onSubmit: FormProps<LoginUserDTO>['onFinish'];
+    onSubmit: FormProps<LoginRequestDTO>['onFinish'];
 }
 
 export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onCancel, onSubmit }) => {

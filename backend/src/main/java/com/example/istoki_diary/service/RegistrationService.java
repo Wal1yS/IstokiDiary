@@ -50,7 +50,7 @@ public class RegistrationService {
         userModel.setPassword(passwordEncoder.encode(request.getPassword()));
         userModel.setEmail(request.getEmail());
         userModel.setNumber(request.getNumber());
-        userModel.setRole("participant");
+        userModel.setRole("USER");
 
         userModel = userRepository.save(userModel);
 

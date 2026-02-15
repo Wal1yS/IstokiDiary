@@ -1,13 +1,15 @@
 import React from "react";
 import {Button, type FormProps} from "antd";
 import { useNavigate } from "react-router-dom";
-import { registerUser, type RegisterUserDTO } from "../../../api/DTO/RegisterUser";
+import { registerUser, type RegisterRequestDTO } from "../../../api/DTO/RegisterUser";
 import { RegisterModal } from "./RegisterModal";
 import "../../css/Buttons.css";
+import {useAuth} from "../../../context/AuthContext.tsx";
 
 export const RegisterButton: React.FC = () => {
 
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     
@@ -17,16 +19,20 @@ export const RegisterButton: React.FC = () => {
     const handleCancel = () => {
         setIsModalOpen(false);
     }
-    const handleSubmit: FormProps<RegisterUserDTO>['onFinish'] = async (values) => {
+    const handleSubmit: FormProps<RegisterRequestDTO>['onFinish'] = async (values) => {
         try{
             const createdUser =  await registerUser(values);
             console.log('User created successfully:', createdUser);
             setIsModalOpen(false);
+            if (createdUser && createdUser.role) {
+                const role = createdUser.role === 'CURATOR' || createdUser.role === 'USER' ? createdUser.role : 'GUEST';
+                login(role);
+            }
             navigate('/home');
         }
         catch (error) {
             console.error('Error registering user:', error);
-            navigate('/home');
+            navigate('/');
         }
     }
 

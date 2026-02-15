@@ -1,0 +1,140 @@
+
+.AemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important; /* Исправлено: font-size и px */
+    color: #4e87ea !important;
+    background-color: white !important;
+    border: 1px solid #4e87ea !important;
+}
+
+.AemotionalBtn:hover {
+    color: #4e87ea !important;
+    background-color: #4e87ea66 !important;
+}
+
+.AemotionalBtn.active {
+    color: #4e87ea !important;
+    background-color: #4e87ea66 !important;
+}
+
+.PemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    color: #70C9E3 !important;
+    background-color: white !important;
+    border: 1px solid #70C9E3 !important;
+}
+
+.PemotionalBtn:hover {
+    color: #70C9E3 !important;
+    background-color: #70C9E366 !important;
+}
+
+.PemotionalBtn.active {
+    color: #70C9E3 !important;
+    background-color: #70C9E366 !important;
+}
+
+.RemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    color: #7fdcb3 !important;
+    background-color: white !important;
+    border: 1px solid #7fdcb3 !important;
+}
+
+.RemotionalBtn:hover {
+    color: #7fdcb3 !important;
+    background-color: #7fdcb366 !important;
+}
+
+.RemotionalBtn.active {
+    color: #7fdcb3 !important;
+    background-color: #7fdcb366 !important;
+}
+
+.BemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    color: #91d90c !important;
+    background-color: white !important;
+    border: 1px solid #91d90c !important;
+}
+
+.BemotionalBtn:hover {
+    color: #91d90c !important;
+    background-color: #91d90c66 !important;
+}
+
+.BemotionalBtn.active {
+    color: #91d90c !important;
+    background-color: #91d90c66 !important;
+}
+
+.VemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    color: #FFD952 !important;
+    background-color: white !important;
+    border: 1px solid #FFD952 !important;
+}
+
+.VemotionalBtn:hover {
+    color: #FFD952 !important;
+    background-color: #FFD95266 !important;
+}
+
+.VemotionalBtn.active {
+    color: #FFD952 !important;
+    background-color: #FFD95266 !important;
+}
+
+.PEemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    background-color: white !important;
+    color: #FF9F45 !important;
+    border: 1px solid #FF9F45 !important;
+}
+
+.PEemotionalBtn:hover {
+    color: #FF9F45 !important;
+    background-color: #FF9F4566 !important;
+}
+
+.PEemotionalBtn.active {
+    background-color: #FF9F4566 !important;
+    color: #FF9F45 !important;
+}
+
+.PAemotionalBtn {
+    width: 7vh !important;
+    height: 4vh !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    color: #FF5C33 !important;
+    background-color: white !important;
+    border: 1px solid #FF5C33 !important;
+}
+
+.PAemotionalBtn:hover {
+    color: #FF5C33 !important;
+    background-color: #FF5C3366 !important;
+}
+
+.PAemotionalBtn.active {
+    background-color: #FF5C3366 !important;
+    color: #FF5C33 !important;
+}

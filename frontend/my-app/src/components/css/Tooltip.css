@@ -1,0 +1,4 @@
+.emotional-tooltip .ant-tooltip-inner {
+    background-color: #f0f2f5 !important;
+    color: var(--buttons-color);
+}

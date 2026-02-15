@@ -1,9 +1,9 @@
 import React from "react";
 import {Button, Form, Input, type FormProps} from "antd";
-import { type LoginUserDTO } from "../../../api/DTO/LoginUser";
+import { type LoginRequestDTO } from "../../../api/DTO/LoginUser";
 
 export type LoginFormProps = {
-    onSubmit: FormProps<LoginUserDTO>['onFinish'];
+    onSubmit: FormProps<LoginRequestDTO>['onFinish'];
 }
 
 export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
@@ -13,7 +13,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
             onFinish={onSubmit}
             autoComplete="off"
         >
-            <Form.Item<LoginUserDTO>
+            <Form.Item<LoginRequestDTO>
                     label="Email"
                     name="email"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваш email!' }]}
@@ -21,7 +21,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
                 <Input />
             </Form.Item>
 
-            <Form.Item<LoginUserDTO>
+            <Form.Item<LoginRequestDTO>
                     label="Пароль"
                     name="password"
                     rules={[{ required: true, message: 'Пожалуйста, введите ваш пароль!' }]}

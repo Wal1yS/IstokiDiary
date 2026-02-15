@@ -84,5 +84,16 @@
 }
 
 .infoBtn.ant-btn-link:hover {
-	color: #800020 !important;
+	color: var(--buttons-color) !important;
+}
+
+.sendBtn{
+    background-color: white !important;
+    color: var(--buttons-color) !important;
+    border: 1px solid var(--buttons-color) !important;
+}
+
+.sendBtn:hover {
+    background-color: var(--buttons-color) !important;
+    color: white !important;
 }

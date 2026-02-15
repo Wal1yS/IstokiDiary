@@ -1,11 +1,19 @@
-import React, { use, useEffect, useState } from 'react';
-
-export interface LoginUserDTO {
+export interface LoginRequestDTO {
     email: string;
     password: string;
 }
 
-export const loginUser = async (user: LoginUserDTO) => {
+export interface LoginResponseDTO {
+    status: string;
+    name: string;
+    surname: string;
+    patronymic: string;
+    role: string;
+    email: string;
+    number: string;
+}
+
+export const loginUser = async (user: LoginRequestDTO): Promise<LoginResponseDTO> => {
     const response = await fetch('http://localhost:8000/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -15,4 +23,5 @@ export const loginUser = async (user: LoginUserDTO) => {
         const errorData = await response.json();
         throw new Error(errorData.message);
     }
+    return await response.json();
 }
