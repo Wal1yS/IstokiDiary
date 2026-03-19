@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "groups", uniqueConstraints = {
+@Table(name = "group", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"name", "sessionId"})
 })
 @NoArgsConstructor
@@ -20,10 +20,10 @@ public class GroupModel {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "sessionId", nullable = true)
+    @JoinColumn(name = "sessionid", nullable = true)
     private SessionModel session;
 
     @OneToOne
-    @JoinColumn(name = "curatorId", nullable = true)
+    @JoinColumn(name = "curatorid", nullable = true)
     private UserModel curator;
 }

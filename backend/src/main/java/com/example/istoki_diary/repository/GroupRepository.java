@@ -5,4 +5,6 @@ import com.example.istoki_diary.model.GroupModel;
 
 @Repository
 public interface GroupRepository extends JpaRepository<GroupModel, Long> {
+    boolean existsByNameAndSessionId(String name, Long sessionId);
+    GroupModel findGroupModelById(Long id);
 }

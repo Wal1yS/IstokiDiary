@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserModel {
@@ -22,6 +22,11 @@ public class UserModel {
     private String role;
     private String email;
     private String number;
-    private Long groupId;
-    private Long sessionId;
+
+    @ManyToOne
+    @JoinColumn(name = "groupid", nullable = true)
+    private GroupModel group;
+    @ManyToOne
+    @JoinColumn(name = "sessionid", nullable = true)
+    private SessionModel session;
 }

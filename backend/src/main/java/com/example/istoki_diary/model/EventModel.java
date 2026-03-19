@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDate;
 
 @Data
 @Entity
-@Table(name = "events", uniqueConstraints = {
+@Table(name = "event", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"name", "sessionId"})
 })
 @NoArgsConstructor
@@ -19,11 +20,11 @@ public class EventModel {
 
     private String name;
     @ManyToOne
-    @JoinColumn(name = "sessionId", nullable = true)
+    @JoinColumn(name = "sessionid")
     private SessionModel session;
     private Long day;
-    private String startTime;
-    private String endTime;
+    private LocalDate startTime;
+    private LocalDate endTime;
     private String type;
     private String description;
     private String tags;

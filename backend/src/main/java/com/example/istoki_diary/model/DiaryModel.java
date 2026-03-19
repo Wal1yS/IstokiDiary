@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDate;
 
 enum States {
     APATHY,
@@ -19,7 +20,7 @@ enum States {
 
 @Data
 @Entity
-@Table(name = "diaries")
+@Table(name = "diary")
 @NoArgsConstructor
 @AllArgsConstructor
 public class DiaryModel {
@@ -28,20 +29,20 @@ public class DiaryModel {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "userId", nullable = false)
+    @JoinColumn(name = "userid", nullable = false)
     private UserModel user;
 
     @ManyToOne
-    @JoinColumn(name = "sessionId", nullable = true)
+    @JoinColumn(name = "sessionid", nullable = true)
     private SessionModel session;
 
     private Long day;
 
     @ManyToOne
-    @JoinColumn(name = "eventId", nullable = true)
+    @JoinColumn(name = "eventid", nullable = true)
     private EventModel event;
 
     private States state;
     private String comment;
-    private String createdAt;
+    private LocalDate createdAt;
 }
